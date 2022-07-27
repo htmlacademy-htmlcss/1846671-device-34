@@ -85,6 +85,8 @@ body {
 /*Стили хедера*/
 .page-header {
   color: #444444;
+  width: 1160px;
+  margin: 0 auto;
   padding: 17px 140px 35px 140px;
 }
 
@@ -96,20 +98,14 @@ body {
   margin-bottom: 31px;
 }
 
-.page-header-container {
-  padding: 0 60px 37px 60px;
+.main-navigation-item{
+  margin: 0 17px;
 }
 
-.page-header-container::before {
-  content: "";
-  color: #ffffff;
-  top: 40px;
-  left: 140px;
-  right: 140px;
-  background-color: #FFE17F;
-  height: 186px;
-  position: absolute;
-  z-index: -1;
+.page-header-container {
+  padding: 0 60px 37px 60px;
+  background: linear-gradient(#ffffff 21px, #FFE17F 21px);
+  position: relative;
 }
 
 .header-user-nav {
@@ -215,7 +211,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   max-width: 235px;
-  justify-content: space-between;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -225,7 +220,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   max-width: 245px;
-  justify-content: space-between;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -235,7 +229,6 @@ body {
   display: flex;
   flex-wrap: wrap;
   width: 480px;
-  justify-content: space-between;
   list-style: none;
   margin: 0;
   padding: 0;
