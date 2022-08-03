@@ -86,7 +86,7 @@ body {
 .page-header {
   width: 1160px;
   margin: 0 auto;
-  padding-top: 19px;
+  padding-top: 15px;
 }
 
 .header-logo-link {
@@ -150,7 +150,7 @@ body {
   position: relative;
 }
 
-.main-page-header-container{
+.main-page-header-container {
   padding-bottom: 0;
 }
 
@@ -239,7 +239,21 @@ body {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #000000;
+  padding: 17px 59px 17px 2px;
+  position: relative;
+}
 
+.catalog-link::after {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-image: url("../images/icons/catalog-button.svg");
+  background-size: 50px 50px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .user-actions-link {
@@ -389,7 +403,7 @@ body {
 
 .main-slider-container {
   padding: 0;
-  margin: 0 0 70px 0;
+  margin: 0 0 64px 0;
 }
 
 .slide-more-link {
@@ -407,6 +421,7 @@ body {
   margin-bottom: 48px;
   display: inline-block;
   width: 220px;
+  box-sizing: border-box;
 }
 
 .main-slide-description {
@@ -470,7 +485,7 @@ body {
   cursor: pointer;
 }
 
-.slider-active-button{
+.slider-active-button {
   background-color: #000000;
 }
 
@@ -605,7 +620,7 @@ body {
 }
 
 .categories-list {
-  margin: 0 0 70px 0;
+  margin: 0 0 79px 0;
   list-style: none;
   width: 100%;
   display: grid;
@@ -659,7 +674,7 @@ body {
 }
 
 .terms-description-list {
-  padding: 0;
+  padding: 9px 0 0 0;
   margin: 0;
   list-style: none;
   display: flex;
@@ -686,7 +701,7 @@ body {
 
 .terms-item {
   width: 280px;
-  margin-bottom: 37px;
+  margin-bottom: 35px;
 }
 
 .active-term-button {
@@ -773,12 +788,10 @@ body {
 }
 
 
-
-
 .rare-product-info {
   position: absolute;
-  top: 30px;
-  right: 183px;
+  top: 31px;
+  right: 43px;
   background-color: rgba(220, 220, 220, 0.5);
   border-radius: 50%;
   width: 40px;
@@ -808,7 +821,11 @@ body {
 
 .contacts-description {
   font-style: normal;
-  margin: 0;
+  margin: 0 0 29px 0;
+}
+
+.work-table {
+  margin: 0 0 33px 0;
 }
 
 .about-container {
@@ -844,7 +861,7 @@ body {
   font-size: 50px;
   line-height: 50px;
   color: #000000;
-  margin: 0 0 48px 0;
+  margin: 0 0 50px 0;
 }
 
 .about-description {
@@ -865,10 +882,23 @@ body {
   letter-spacing: -0.02em;
   color: #000000;
   margin-bottom: 19px;
+  padding-left: 34px;
+  position: relative;
+}
+
+.transport-item::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 2px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #FFC700;
 }
 
 .transport-item:last-child {
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .about-more-link {
@@ -883,11 +913,15 @@ body {
   text-decoration: none;
   padding: 10px;
   width: 270px;
+  display: inline-block;
+  box-sizing: border-box;
+  background: linear-gradient(#ffffff 16px, #FFE17F 16px 24px, #ffffff 24px);
 }
 
 .contacts-subheader {
   font-weight: 700;
   font-size: 24px;
+  margin: 0 0 14px 0;
 }
 
 .contacts-request-link {
@@ -900,6 +934,12 @@ body {
   text-transform: uppercase;
   color: #000000;
   text-decoration: none;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 40px;
+  width: 262px;
+  background: linear-gradient(#ffffff 16px, #FFE17F 16px 24px, #ffffff 24px);
+  padding: 9px;
 }
 
 /*Стили блока подпишитесь на рассылку*/
@@ -911,19 +951,19 @@ body {
 .subscription-inner-container {
   width: 1160px;
   margin: 0 auto;
-  padding: 64px 0 56px 0;
+  padding: 63px 0 56px 0;
 }
 
 .subscription-text {
   display: flex;
   width: 100%;
-  margin-bottom: 144px;
+  margin-bottom: 133px;
 }
 
 .subscription-description {
   margin: 0 0 0 auto;
   max-width: 650px;
-  padding: 0 45px;
+  padding: 10px 20px 10px 52px;
 }
 
 .subscription-form {
@@ -938,6 +978,11 @@ body {
 
 .free-container {
   margin-left: auto;
+  padding-left: 32px;
+  background-image: url("../images/icons/check-mark.svg");
+  background-position: 2px 8px;
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
 }
 
 .subscription-header {
@@ -978,7 +1023,8 @@ body {
   color: #000000;
   background-color: transparent;
   width: 253px;
-  padding: 18px;
+  padding: 15px;
+  box-sizing: border-box;
   border: 3px solid #C4C4C4;
 }
 
@@ -1067,6 +1113,7 @@ body {
 .heading-catalog-container {
   width: 1160px;
   margin: 0 auto;
+  padding-top: 35px;
 }
 
 .catalog-header {
@@ -1085,9 +1132,25 @@ body {
   text-decoration: none;
 }
 
-.breadcrumbs-item:not(:first-child) {
-  margin-left: 36px;
+.breadcrumbs-item {
+  margin: 0 18px;
+  position: relative;
 }
+
+
+.breadcrumbs-item:not(:last-child)::after {
+  position: absolute;
+  content: "";
+  background-image: url("../images/icons/breadcrumbs-arrow.svg");
+  width: 4px;
+  height: 7px;
+  right: -20px;
+  top: 11px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 4px 7px;
+}
+
 
 .social-list {
   margin: 0 0 0 380px;
@@ -1109,7 +1172,7 @@ body {
   background-color: #FFC700;
 }
 
-.social-button{
+.social-button {
   min-width: 40px;
   min-height: 40px;
   border-radius: 50%;
@@ -1175,13 +1238,19 @@ body {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #000000;
+  border: none;
+  padding: 10px;
+  background: linear-gradient(transparent 16px, #FFE17F 16px 24px, transparent 24px);
+  display: inline-block;
+  width: 220px;
+  box-sizing: border-box;
+  height: 40px;
 }
 
 /*Стили сортировки, карточек товара, загрузить еще и пагинации*/
 .sorting-container {
   padding: 0 40px 20px 40px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -1227,7 +1296,8 @@ body {
 
 .breadcrumbs-list {
   display: flex;
-  margin: 0 0 35px 60px;
+  flex-wrap: wrap;
+  margin: 0 0 35px 42px;
   padding: 0;
   list-style: none;
 }
@@ -1235,12 +1305,28 @@ body {
 .catalog-sorting-buttons-container {
   display: flex;
   flex-wrap: wrap;
-  width: 150px;
+  width: 250px;
   justify-content: flex-end;
 }
 
-.catalog-sorting-button:not(:first-child) {
-  margin-left: 19px;
+.sorting-button-icon {
+  fill: #c0c0c0;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 11px;
+  height: 10px;
+}
+
+.catalog-sorting-button {
+  position: relative;
+  border: 0;
+  height: 34px;
+  width: 34px;
 }
 
 .sorting-header {
@@ -1251,7 +1337,7 @@ body {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #000000;
-  width: 150px;
+  width: 250px;
 }
 
 .sorting-select-field {
@@ -1263,6 +1349,7 @@ body {
   width: 142px;
   border: none;
   background-color: transparent;
+  margin: 0 auto;
 }
 
 .catalog-item-header {
@@ -1306,6 +1393,10 @@ body {
   opacity: 0.3;
   text-decoration: none;
   padding: 10px 16px;
+}
+
+.prev-catalog-page {
+  margin-right: 13px;
 }
 
 .pagination-container {
