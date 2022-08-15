@@ -64,7 +64,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
-  color: #444444;
+  color: #000000;
 }
 
 .main-container {
@@ -80,6 +80,69 @@ body {
   border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.button {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: none;
+  padding: 10px;
+  display: inline-block;
+  width: 200px;
+  box-sizing: border-box;
+  height: 40px;
+  position: relative;
+  z-index: 0;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.button::before {
+  content: "";
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: #FFE17F;
+  position: absolute;
+  height: 8px;
+  width: 100%;
+  z-index: -1;
+}
+
+.button:hover {
+  background-color: #FFE17F;
+}
+
+.button:active {
+  background-color: #FFCC33;
+}
+
+.button:active::before {
+  display: none;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus::after {
+  content: "";
+  top: -4px;
+  left: -4px;
+  position: absolute;
+  box-sizing: border-box;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  border: 2px solid #AF4FFF;
+}
+
+.button:disabled {
+  opacity: 0.3;
 }
 
 /*Стили хедера*/
@@ -610,65 +673,9 @@ body {
 }
 
 .slide-more-link {
-  font-family: "Raleway", sans-serif;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 21px;
-  text-align: center;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #000000;
   text-decoration: none;
-  padding: 10px;
   margin-bottom: 48px;
-  display: inline-block;
   width: 220px;
-  box-sizing: border-box;
-  position: relative;
-  z-index: 0;
-}
-
-.slide-more-link::after {
-  content: "";
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  background-color: #FFE17F;
-  position: absolute;
-  height: 8px;
-  width: 220px;
-  z-index: -1;
-}
-
-.slide-more-link:hover {
-  background-color: #FFE17F;
-}
-
-.slide-more-link:active {
-  background-color: #FFCC33;
-}
-
-.slide-more-link:active::after {
-  display: none;
-}
-
-.slide-more-link:focus {
-  outline: none;
-}
-
-.slide-more-link:focus::before {
-  content: "";
-  top: 0;
-  left: 0;
-  position: absolute;
-  box-sizing: border-box;
-  width: 220px;
-  height: 40px;
-  border: 2px solid #AF4FFF;
-}
-
-.slide-more-link:disabled {
-  opacity: 0.3;
 }
 
 .main-slide-description {
@@ -921,109 +928,9 @@ body {
   width: 100%;
 }
 
-.terms-item-name {
-  position: relative;
-  font-family: "Raleway", sans-serif;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 21px;
-  text-align: center;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #000000;
-  width: 160px;
-  border: none;
-  padding: 10px;
-  height: 40px;
-  box-sizing: border-box;
-  z-index: 0;
-}
-
-.terms-item-name::before {
-  content: "";
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  background-color: #FFE17F;
-  position: absolute;
-  height: 8px;
-  width: 160px;
-  z-index: -1;
-}
-
-.terms-item-name:hover {
-  background-color: #FFE17F;
-}
-
-.terms-item-name:active {
-  background-color: #FFCC33;
-}
-
-.terms-item-name:active::after {
-  display: none;
-}
-
-.terms-item-name:focus {
-  outline: none;
-}
-
-.terms-item-name:focus::after {
-  content: "";
-  top: 0;
-  left: 0;
-  position: absolute;
-  box-sizing: border-box;
-  width: 160px;
-  height: 40px;
-  border: 2px solid #AF4FFF;
-}
-
-.terms-item-name:disabled {
-  opacity: 0.3;
-}
-
 .terms-item {
   width: 280px;
   margin-bottom: 35px;
-}
-
-.active-term-button {
-  color: #FFE17F;
-  background-color: #000000;
-  width: 100%;
-  padding-left: 20px;
-  text-align: start;
-  /*z-index: 1;*/
-  position: relative;
-}
-
-.active-term-button.terms-item-name::before {
-  display: none;
-}
-
-.active-term-button:hover {
-  background-color: #000000;
-  color: rgba(255, 225, 127, 0.5);
-}
-
-.active-term-button:active {
-  background-color: #000000;
-  color: rgba(255, 225, 127, 0.3);
-}
-
-.active-term-button:focus {
-  outline: none;
-}
-
-.active-term-button:focus::after {
-  content: "";
-  top: -3px;
-  left: -3px;
-  position: absolute;
-  box-sizing: border-box;
-  width: 288px;
-  height: 46px;
-  border: 2px solid #AF4FFF;
 }
 
 .term-header {
@@ -1296,56 +1203,8 @@ body {
 }
 
 .about-more-link {
-  font-family: "Raleway", sans-serif;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 21px;
-  text-align: center;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #000000;
+  width: 270px;
   text-decoration: none;
-  padding: 10px;
-  width: 270px;
-  display: inline-block;
-  box-sizing: border-box;
-  position: relative;
-}
-
-.about-more-link::before {
-  content: "";
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  background-color: #FFE17F;
-  position: absolute;
-  height: 8px;
-  width: 270px;
-  z-index: -1;
-}
-
-.about-more-link:hover {
-  background-color: #FFE17F;
-}
-
-.about-more-link:active {
-  background-color: #FFCC33;
-}
-
-.about-more-link:focus {
-  outline: none;
-}
-
-.about-more-link:focus::after {
-  content: "";
-  top: 0;
-  left: 0;
-  position: absolute;
-  box-sizing: border-box;
-  width: 270px;
-  height: 40px;
-  z-index: 2;
-  border: 2px solid #AF4FFF;
 }
 
 .contacts-subheader {
@@ -1355,59 +1214,9 @@ body {
 }
 
 .contacts-request-link {
-  font-family: "Raleway", sans-serif;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 21px;
-  text-align: center;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #000000;
   text-decoration: none;
-  box-sizing: border-box;
-  display: inline-block;
-  height: 40px;
   width: 259px;
-  padding: 9px;
-  position: relative;
 }
-
-.contacts-request-link::before {
-  content: "";
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  background-color: #FFE17F;
-  position: absolute;
-  height: 8px;
-  width: 259px;
-  z-index: -1;
-}
-
-.contacts-request-link:hover {
-  background-color: #FFE17F;
-}
-
-.contacts-request-link:active {
-  background-color: #FFCC33;
-}
-
-.contacts-request-link:focus {
-  outline: none;
-}
-
-.contacts-request-link:focus::after {
-  content: "";
-  top: 0;
-  left: 0;
-  position: absolute;
-  box-sizing: border-box;
-  width: 259px;
-  height: 40px;
-  z-index: 2;
-  border: 2px solid #AF4FFF;
-}
-
 
 /*Стили блока подпишитесь на рассылку*/
 .subscription-container {
@@ -1943,7 +1752,7 @@ body {
   margin-bottom: 48px;
 }
 
-.catalog-bluetooth-list {
+.form-radio-list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -2003,61 +1812,8 @@ body {
 }
 
 .catalog-show-button {
-  font-family: "Raleway", sans-serif;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 21px;
-  text-align: center;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #000000;
-  border: none;
-  padding: 10px;
-  display: inline-block;
   width: 220px;
-  box-sizing: border-box;
-  height: 40px;
-  position: relative;
-  z-index: 0;
-}
-
-.catalog-show-button::before {
-  content: "";
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  background-color: #FFE17F;
-  position: absolute;
-  height: 8px;
-  width: 220px;
-  z-index: -1;
-}
-
-.catalog-show-button:hover {
-  background-color: #FFE17F;
-}
-
-.catalog-show-button:active {
-  background-color: #FFCC33;
-}
-
-.catalog-show-button:active::before {
-  display: none;
-}
-
-.catalog-show-button:focus {
-  outline: none;
-}
-
-.catalog-show-button:focus::after {
-  content: "";
-  top: 0;
-  left: 0;
-  position: absolute;
-  box-sizing: border-box;
-  width: 220px;
-  height: 40px;
-  border: 2px solid #AF4FFF;
+  background-color: #f0f0f0;
 }
 
 .slide-more-link:disabled {
@@ -2556,11 +2312,6 @@ body {
 }
 
 /*Модальное окно*/
-/*Раскомментировать display: none; для просмотра модального окна*/
-.modal-container-close {
-  /*display: none;*/
-}
-
 .modal-container {
   position: fixed;
   top: 0;
@@ -2569,6 +2320,11 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(240, 240, 240, 0.9);
+}
+
+/*Закомментировать display: none; для просмотра модального окна*/
+.modal-container-close {
+  display: none;
 }
 
 .modal {
@@ -2627,41 +2383,36 @@ body {
   width: 540px;
 }
 
-.order-field-input-counter{
-  width: 180px;
-  text-align: center;
+.active-term-button:hover {
+  background-color: #000000;
+  color: rgba(255, 225, 127, 0.5);
 }
 
-.order-form-button {
-  font-family: "Raleway", sans-serif;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 21px;
-  text-align: center;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #000000;
-  border: none;
-  padding: 10px;
-  display: inline-block;
-  width: 200px;
-  box-sizing: border-box;
-  height: 40px;
+.active-term-button:active {
+  background-color: #000000;
+  color: rgba(255, 225, 127, 0.3);
+}
+
+.active-term-button:focus {
+  outline: none;
+}
+
+.active-term-button.button::before {
+  display: none;
+}
+
+.terms-item-name {
+  width: 160px;
+  background-color: #F0F0F0;
+}
+
+.active-term-button {
+  color: #FFE17F;
+  background-color: #000000;
+  width: 100%;
+  padding-left: 20px;
+  text-align: start;
   position: relative;
-  z-index: 0;
-  background-color: #ffffff;
-}
-
-.order-form-button::before {
-  content: "";
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  background-color: #FFE17F;
-  position: absolute;
-  height: 8px;
-  width: 200px;
-  z-index: -1;
 }
 
 .order-field-container {
@@ -2707,6 +2458,7 @@ body {
   align-items: center;
   color: #000000;
   border: 2px solid transparent;
+  position: relative;
 }
 
 .order-field-input::placeholder {
@@ -2714,7 +2466,46 @@ body {
   opacity: 0.3;
 }
 
-.order-feild-error{
+.order-field-input:hover {
+  background-color: #DCDCDC;
+}
+
+.order-field-input:active {
+  background-color: #EBEBEB;
+}
+
+.order-field-input:focus {
+  outline: none;
+}
+
+.order-field-input:focus::before {
+  content: "";
+  top: -4px;
+  left: -4px;
+  position: absolute;
+  box-sizing: border-box;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  border: 2px solid #AF4FFF;
+}
+
+.order-field-input:disabled {
+  opacity: 0.3;
+}
+
+.order-field-input-counter {
+  width: 58px;
+  text-align: center;
+  padding: 0;
+}
+
+.order-field-input-counter::-webkit-outer-spin-button,
+.order-field-input-counter::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.order-feild-error {
   border: 2px solid #FF3D3D;
 }
 
@@ -2747,8 +2538,7 @@ body {
   justify-content: center;
   box-sizing: border-box;
   height: 100%;
-  width: 60px;
-  position: absolute;
+  width: 59px;
 }
 
 .button-minus {
@@ -2836,9 +2626,269 @@ body {
   background-position: 325px center;
 }
 
-.order-counter-container{
+.order-counter-container {
   display: flex;
   width: 180px;
   box-sizing: border-box;
   position: relative;
+}
+
+/*Стили поповера*/
+.popover-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: #000000;
+  z-index: 2;
+  width: 320px;
+  top: 32px;
+  left: -124px;
+}
+
+.popover-container::before {
+  content: "";
+  width: 14px;
+  height: 6px;
+  left: 50%;
+  top: -7px;
+  position: absolute;
+  transform: translateX(-50%);
+  background-image: url("../images/icons/tooltip-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 14px 6px;
+}
+
+/*Для просмотра поповера закомментировать display:none*/
+.popover-display-container {
+  display: none;
+}
+
+.popover-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.popover-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.popover-product-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 20px;
+  width: 172px;
+  padding-left: 62px;
+  background-size: 39px 43px;
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  position: relative;
+}
+
+.popover-product-link-amateur {
+  background-image: url("../images/amateur-monopod.jpg");
+}
+
+.popover-product-link-professional {
+  background-image: url("../images/professional-monopod.jpg");
+}
+
+.popover-product-link:hover {
+  opacity: 0.6;
+}
+
+.popover-product-link:active {
+  opacity: 0.3;
+}
+
+.popover-product-link:focus {
+  outline: none;
+}
+
+.popover-product-link:focus::after {
+  content: "";
+  top: -4px;
+  left: -4px;
+  position: absolute;
+  box-sizing: border-box;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  border: 2px solid #AF4FFF;
+}
+
+.popover-button-container {
+  padding: 20px;
+}
+
+.popover-delete-product-button {
+  background-color: transparent;
+  border: none;
+  background-image: url("../images/icons/cross.svg");
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.popover-delete-product-button:hover {
+  opacity: 0.6;
+}
+
+.popover-delete-product-button:active {
+  opacity: 0.3;
+}
+
+.popover-delete-product-button:focus {
+  outline: none;
+}
+
+.popover-delete-product-button:focus::after {
+  content: "";
+  top: 14px;
+  left: 14px;
+  position: absolute;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #AF4FFF;
+}
+
+.popover-result-container {
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 20px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: #1a1a1a;
+}
+
+.popover-open-basket-link {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  height: 50px;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  position: relative;
+  color: #000000;
+  text-decoration: none;
+}
+
+.popover-open-basket-link:hover {
+  background-color: #FFE17F;
+}
+
+.popover-open-basket-link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.popover-open-basket-link:focus {
+  outline: none;
+}
+
+.popover-open-basket-link:focus::after {
+  content: "";
+  top: -4px;
+  left: -4px;
+  position: absolute;
+  box-sizing: border-box;
+  width: calc(100% + 7px);
+  height: calc(100% + 8px);
+  border: 2px solid #AF4FFF;
+}
+
+.popover-open-basket-link:disabled {
+  background-color: #ffffff;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+/*Стили повляющегся меню с категориями товаров*/
+/*Для просмотра выпадающего меню закомментировать display: none;*/
+.dropdown-display-container {
+  /*display: none;*/
+}
+
+.catalog-menu-dropdown{
+  display: flex;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  z-index: 5;
+  top: 200px;
+}
+
+.catalog-main-list{
+  margin: 0;
+  padding: 0 0 27px 0;
+  list-style: none;
+  background-color: #FFE17F;
+  width: 100%;
+  display: flex;
+}
+
+.catalog-sublist{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+}
+
+.catalog-main-list:first-child{
+  padding-left: 60px;
+}
+
+.catalog-sublist-item{
+  margin-bottom: 20px;
+}
+
+.catalog-sublist-link{
+  color: #000000;
+  text-decoration: none;
+  position: relative;
+}
+
+.catalog-sublist-link:hover{
+  opacity: 0.6;
+}
+
+.catalog-sublist-link:active{
+  opacity: 0.3;
+}
+
+.catalog-sublist-link:focus{
+  outline: none;
+}
+
+.catalog-sublist-link:focus::before{
+  content: "";
+  top: -4px;
+  left: -4px;
+  position: absolute;
+  box-sizing: border-box;
+  width: calc(100% + 8px);
+  height: calc(100% + 8px);
+  border: 2px solid #AF4FFF;
 }
