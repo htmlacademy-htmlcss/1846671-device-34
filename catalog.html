@@ -7,7 +7,7 @@
 </head>
 <body>
 <header class="page-header">
-  <div class="page-header-container main-page-header-container">
+  <div class="page-header-container">
     <div class="header-logo-container">
       <a href="index.html" class="header-logo-link">
         <img class="header-logo-icon" alt="Логотип магазина продажи Девайс" src="images/header-logo.svg" height="36"
@@ -15,73 +15,98 @@
       </a>
     </div>
     <nav class="header-user-nav">
-      <form class="header-search-container" method="post" action="https://echo.htmlacademy.ru/">
-        <div class="search-input-container">
-          <label for="header-search-field" class="visually-hidden">Поиск</label>
-          <input type="text" id="header-search-field" placeholder="Текст поиска" name="header-search-field"
-                 class="header-search-input" required>
-        </div>
-        <button type="submit" class="header-search-button">Найти</button>
-      </form>
-      <div class="header-user-menu">
-        <ul class="header-user-container">
-          <li class="header-user-item">
-            <a href="#" class="user-actions-link user-item-link">Коля Петухов</a>
-          </li>
-          <li class="header-user-item">
-            <a href="#" class="user-actions-link logout-link">Выйти</a>
-          </li>
-        </ul>
-        <ul class="header-user-actions-container">
-          <li class="header-user-actions-item">
-            <a href="#" class="user-actions-link compare-link">Сравнить</a>
-          </li>
-          <li class="header-user-actions-item basket-item">
-            <span class="basket-counter">2</span>
-            <a href="#" class="user-actions-link basket-link">Корзина</a>
-            <div class="popover-container popover-display-container">
-              <ul class="popover-list">
-                <li class="popover-item">
-                  <a href="#" class="popover-product-link popover-product-link-amateur">Любительская селфи-палка</a>
-                  <button type="button" class="popover-delete-product-button">
-                    <span class="visually-hidden">Удалить товар из корзины.</span>
-                  </button>
-                </li>
-                <li class="popover-item">
-                  <a href="#" class="popover-product-link popover-product-link-professional">Профессиональная
-                    селфи-палка</a>
-                  <button type="button" class="popover-delete-product-button">
-                    <span class="visually-hidden">Удалить товар из корзины.</span>
-                  </button>
-                </li>
-              </ul>
-              <p class="popover-result-container">
-                <span class="popover-result-item">Товаров: 2</span>
-                <span class="popover-result-item">Сумма: 2000 ₽</span>
-              </p>
-              <div class="popover-button-container">
-                <a href="#" class="popover-open-basket-link">Открыть корзину</a>
+      <div class="header-pages-nav">
+        <form class="header-search-container" method="post" action="https://echo.htmlacademy.ru/">
+          <div class="search-input-container">
+            <label for="header-search-field" class="visually-hidden">Поиск</label>
+            <input type="text" id="header-search-field" placeholder="Текст поиска" name="header-search-field"
+                   class="header-search-input" required>
+          </div>
+          <button type="submit" class="header-search-button dark-button">Найти</button>
+        </form>
+        <div class="header-user-menu">
+          <ul class="header-user-container">
+            <li class="header-user-item">
+              <a href="#" class="user-actions-link user-item-link">Коля Петухов</a>
+            </li>
+            <li class="header-user-item">
+              <a href="#" class="user-actions-link logout-link">Выйти</a>
+            </li>
+          </ul>
+          <ul class="header-user-actions-container">
+            <li class="header-user-actions-item">
+              <a href="#" class="user-actions-link compare-link">Сравнить</a>
+            </li>
+            <li class="header-user-actions-item basket-item">
+              <span class="basket-counter">2</span>
+              <a href="#" class="user-actions-link basket-link">Корзина</a>
+              <div class="popover-container popover-display-container">
+                <ul class="popover-list">
+                  <li class="popover-item">
+                    <a href="#" class="popover-product-link popover-product-link-amateur">Любительская селфи-палка</a>
+                    <button type="button" class="popover-delete-product-button">
+                      <span class="visually-hidden">Удалить товар из корзины.</span>
+                    </button>
+                  </li>
+                  <li class="popover-item">
+                    <a href="#" class="popover-product-link popover-product-link-professional">Профессиональная
+                      селфи-палка</a>
+                    <button type="button" class="popover-delete-product-button">
+                      <span class="visually-hidden">Удалить товар из корзины.</span>
+                    </button>
+                  </li>
+                </ul>
+                <p class="popover-result-container">
+                  <span class="popover-result-item">Товаров: 2</span>
+                  <span class="popover-result-item">Сумма: 2000 ₽</span>
+                </p>
+                <div class="popover-button-container">
+                  <a href="#" class="popover-open-basket-link">Открыть корзину</a>
+                </div>
               </div>
-            </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header-pages-nav">
+        <div class="main-catalog-container">
+          <button class="catalog-link">Каталог товаров</button>
+          <div class="catalog-menu-dropdown dropdown-display-container">
+            <ul class="catalog-main-list">
+              <li class="catalog-main-item">
+                <ul class="catalog-sublist">
+                  <li class="catalog-sublist-item"><a href="#" class="catalog-sublist-link">Виртуальная реальность</a>
+                  </li>
+                  <li class="catalog-sublist-item"><a href="#" class="catalog-sublist-link">Моноподы для cелфи</a></li>
+                  <li class="catalog-sublist-item"><a href="#" class="catalog-sublist-link">Экшн-камеры</a></li>
+                </ul>
+              </li>
+              <li class="catalog-main-item">
+                <ul class="catalog-sublist">
+                  <li class="catalog-sublist-item"><a href="#" class="catalog-sublist-link">Фитнес-браслеты</a></li>
+                  <li class="catalog-sublist-item"><a href="#" class="catalog-sublist-link">Умные часы</a></li>
+                </ul>
+              </li>
+              <li class="catalog-main-item">
+                <ul class="catalog-sublist">
+                  <li class="catalog-sublist-item"><a href="#" class="catalog-sublist-link">Квадрокоптеры</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <ul class="main-navigation-list">
+          <li class="main-navigation-item">
+            <a href="#" class="header-navigation-link">Доставка</a>
+          </li>
+          <li class="main-navigation-item">
+            <a href="#" class="header-navigation-link">Гарантия</a>
+          </li>
+          <li class="main-navigation-item">
+            <a href="#" class="header-navigation-link">Контакты</a>
           </li>
         </ul>
       </div>
-    </nav>
-    <nav class="header-pages-nav">
-      <div class="main-catalog-container">
-        <button class="catalog-link">Каталог товаров</button>
-      </div>
-      <ul class="main-navigation-list">
-        <li class="main-navigation-item">
-          <a href="#" class="header-navigation-link">Доставка</a>
-        </li>
-        <li class="main-navigation-item">
-          <a href="#" class="header-navigation-link">Гарантия</a>
-        </li>
-        <li class="main-navigation-item">
-          <a href="#" class="header-navigation-link">Контакты</a>
-        </li>
-      </ul>
     </nav>
   </div>
 </header>
