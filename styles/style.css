@@ -921,6 +921,11 @@ body {
 
 .term-description {
   margin: 0 0 20px 0;
+  max-width: 480px;
+}
+
+.delivery-term .term-description {
+  margin: 0 0 20px 0;
   max-width: 455px;
 }
 
