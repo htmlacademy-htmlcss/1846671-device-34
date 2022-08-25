@@ -618,6 +618,7 @@ body {
   background-image: url("../images/icons/left-arrow.svg");
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
 }
 
 
@@ -2535,8 +2536,8 @@ body {
   padding: 0;
   top: 62px;
   right: 59px;
-  width: 48px;
-  height: 48px;
+  width: 26px;
+  height: 26px;
   border: none;
   cursor: pointer;
   display: flex;
@@ -2564,7 +2565,6 @@ body {
 .modal-close-button:focus::before {
   content: "";
   top: -4px;
-  transform: translateY(-50%) translateX(-50%);
   left: -4px;
   position: absolute;
   box-sizing: border-box;
@@ -2714,6 +2714,7 @@ body {
   width: calc(100% + 8px);
   height: calc(100% + 8px);
   border: 2px solid #AF4FFF;
+  z-index: 1;
 }
 
 .order-field-input:disabled {
@@ -3037,7 +3038,7 @@ body {
 }
 
 .popover-open-basket-link {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
